@@ -1,5 +1,6 @@
 ﻿syntax = "proto3";
 import "Protos/enums.proto";
+import "google/protobuf/timestamp.proto";
 
 option csharp_namespace = "GrpcDemo.Services";
 
@@ -13,6 +14,7 @@ message ReadingMessage{
   int32 readingValue = 2;
   string notes = 3;
   ReadingStatus successful = 4;
+  google.protobuf.Timestamp readingTime = 5;
 }
 
 message StatusMessage{
