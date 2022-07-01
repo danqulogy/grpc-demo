@@ -8,6 +8,9 @@ service MeterReadingService{
   rpc AddReading(ReadingMessage) returns (StatusMessage);
 }
 
+message ReadingPacket{
+  repeated ReadingMessage readings = 1;
+}
 
 message ReadingMessage{
   int32 customerId = 1;
