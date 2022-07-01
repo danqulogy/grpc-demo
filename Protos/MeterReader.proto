@@ -8,7 +8,6 @@ service MeterReadingService{
 }
 
 
-
 message ReadingMessage{
   int32 customerId = 1;
   int32 readingValue = 2;
