@@ -17,7 +17,9 @@ message ReadingPacket{
 message ReadingMessage{
   int32 customerId = 1;
   int32 readingValue = 2;
-  google.protobuf.Timestamp readingTime = 3;
+  google.protobuf.Timestamp readingTime = 5;
+  reserved 3,4; // Can't use ordinal 3,4 to prevent confusion on old clients
+  reserved "successful"; // Added versioning
 }
 
 message StatusMessage{
