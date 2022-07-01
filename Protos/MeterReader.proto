@@ -1,4 +1,5 @@
 ﻿syntax = "proto3";
+import "Protos/enums.proto";
 
 option csharp_namespace = "GrpcDemo.Services";
 
@@ -12,10 +13,10 @@ message ReadingMessage{
   int32 customerId = 1;
   int32 readingValue = 2;
   string notes = 3;
-  bool successful = 4;
+  ReadingStatus successful = 4;
 }
 
 message StatusMessage{
   string message = 1;
-  bool success = 2;
+  ReadingStatus success = 2;
 }

@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcDemo.Protos";
+
+enum ReadingStatus{
+  INVALID = 0;
+  SUCCESS = 1;
+  FAILURE = 2;
+}
