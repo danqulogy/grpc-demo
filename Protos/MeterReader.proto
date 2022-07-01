@@ -5,7 +5,7 @@ import "google/protobuf/timestamp.proto";
 option csharp_namespace = "GrpcDemo.Services";
 
 service MeterReadingService{
-  rpc AddReading(ReadingMessage) returns (StatusMessage);
+  rpc AddReading(ReadingPacket) returns (StatusMessage);
 }
 
 message ReadingPacket{
